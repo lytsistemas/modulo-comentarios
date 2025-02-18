@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Este módulo proporciona funcionalidad para gestionar comentarios en una aplicación web. Permite crear, leer, actualizar y eliminar comentarios.
+Este módulo proporciona funcionalidad para gestionar comentarios en una aplicación web con el framework Laminas. Permite crear, leer, actualizar y eliminar comentarios.
 
 ## Características
 
@@ -26,14 +26,15 @@ Este módulo proporciona funcionalidad para gestionar comentarios en una aplicac
 4. Ejecuta el comando `php bin/laminas migration run` para crear las tablas de la base de datos
 
 ## Uso
+docker build -t laminas-image
 
-* Accede a la ruta `/comentario` para ver la lista de comentarios
-* Accede a la ruta `/comentario/create` para crear un nuevo comentario
-* Accede a la ruta `/comentario/{id}` para ver un comentario específico
-* Accede a la ruta `/comentario/{id}/edit` para editar un comentario existente
-* Accede a la ruta `/comentario/{id}/delete` para eliminar un comentario
+docker run -d --name laminas-container -p 80:80 laminas-image
+
+http://localhost/comentario
 
 ## Capturas de pantalla
+
+[ScreenshotComentarios.webm](https://github.com/user-attachments/assets/db5f6192-0d2f-4730-858d-7e86fd60057b)
 
 
 ## Licencia
