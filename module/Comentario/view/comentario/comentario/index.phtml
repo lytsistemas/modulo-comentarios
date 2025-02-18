@@ -1,0 +1,27 @@
+<?php
+
+$title = 'Comentarios';
+$this->headTitle($title);
+?>
+<h1><?= $this->escapeHtml($title) ?></h1>
+<p>
+    <a href="<?= $this->url('comentario', ['action' => 'add']) ?>">Añadir nuevo comentario</a>
+</p>
+
+<table class="table">
+<tr>
+    <th>Post</th>
+    <th>Comentario</th>
+    <th>&nbsp;</th>
+</tr>
+<?php foreach ($comentarios as $comentario) : ?>
+    <tr>
+        <td><?= $this->escapeHtml($comentario->post) ?></td>
+        <td><?= $this->escapeHtml($comentario->comentario) ?></td>
+        <td>
+            <a href="<?= $this->url('comentario', ['action' => 'edit', 'id' => $comentario->id]) ?>">Edit</a>
+            <a href="<?= $this->url('comentario', ['action' => 'delete', 'id' => $comentario->id]) ?>">Delete</a>
+        </td>
+    </tr>
+<?php endforeach; ?>
+</table>
